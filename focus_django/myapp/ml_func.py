@@ -49,7 +49,7 @@ def call_anthropic_api(content,prompt):
     prompt_text = prompt + "\n\n Text: " + content
     client = anthropic.Anthropic(
         # defaults to os.environ.get("ANTHROPIC_API_KEY")
-        api_key="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",
+        api_key="<API_KEY>",
     )
     message = client.messages.create(
         model="claude-3-opus-20240229",
