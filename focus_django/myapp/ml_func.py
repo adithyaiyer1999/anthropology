@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import anthropic
+import os
 
 MAX_TOKEN_LEN = 160000
 
@@ -48,8 +49,9 @@ def call_anthropic_api(content,prompt):
 
     prompt_text = prompt + "\n\n Text: " + content
     client = anthropic.Anthropic(
-        # defaults to os.environ.get("ANTHROPIC_API_KEY")
-        api_key="<API_KEY>",
+        os.environ.get("ANTHROPIC_API_KEY")
+        ## get the key from process.env
+        #process.env.ANTHROPIC_API_KEY
     )
     message = client.messages.create(
         model="claude-3-opus-20240229",
