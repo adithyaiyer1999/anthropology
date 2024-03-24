@@ -5,7 +5,7 @@ subject = "Here's your summary of your hardwork today!"
 # body = "This is the body of the text message"
 sender = "aibarcaboy@gmail.com"
 recipients = ["adithyaiyer1999@gmail.com", "srushtipawar12@gmail.com"]
-password = "tehtsochydibhogd"
+password = "<PASSCODE>"
 
 
 # Construct the complete HTML email
